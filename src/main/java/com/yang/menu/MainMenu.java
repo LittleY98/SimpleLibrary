@@ -1,5 +1,6 @@
 package com.yang.menu;
 
+import com.yang.common.ConstantDataCollect;
 import com.yang.start.Start;
 
 import java.util.AbstractList;
@@ -22,7 +23,7 @@ public class MainMenu {
 
     public static void showMainMenu(){
 
-        List<String> collect = Start.mainMenuList.stream().map(AbstractMenu::getMenuName).collect(Collectors.toList());
+        List<String> collect = ConstantDataCollect.mainMenuList.stream().map(AbstractMenu::getMenuName).collect(Collectors.toList());
 
         System.out.println(TITTLE);
 
@@ -38,7 +39,7 @@ public class MainMenu {
         while (true){
             Integer operation = scanner.nextInt();
 
-            AbstractMenu abstractMenu = Start.mainMenuList.get(operation - 1);
+            AbstractMenu abstractMenu = ConstantDataCollect.mainMenuList.get(operation - 1);
             abstractMenu.fun("");
 
         }
