@@ -28,25 +28,12 @@ public class UpdateBookMenu extends AbstractMenu{
         if (isExit) {
             bookService.removeBook(new Book(uuid));
 
-            System.out.println("请输入书名:");
-            name = new Scanner(System.in).next();
-            System.out.println("请输入备注信息:");
-            remark = new Scanner(System.in).next();
-
-            if (uuid.isBlank() || name.isBlank()){
-                System.out.println("uuid和书名不可为空！！！");
-            }else {
-                Book book = new Book(uuid, name, remark);
-                Boolean res = bookService.addBook(book);
-
-                System.out.println(res ? "添加成功！" : "添加失败！");
-            }
+            AddBookMenu.addBookInsert(uuid, bookService);
         }else {
             System.out.println("该uuid不存在！");
         }
         SimpleCommonUtil.keyEnterToNext();
         return null;
     }
-
 
 }

@@ -23,6 +23,16 @@ public class AddBookMenu extends AbstractMenu{
 
         System.out.println("请输入uuid:");
         uuid = new Scanner(System.in).next();
+        addBookInsert(uuid, bookService);
+
+        SimpleCommonUtil.keyEnterToNext();
+
+        return null;
+    }
+
+    public static void addBookInsert(String uuid, IBookService bookService) {
+        String name;
+        String remark;
         System.out.println("请输入书名:");
         name = new Scanner(System.in).next();
         System.out.println("请输入备注信息:");
@@ -36,9 +46,6 @@ public class AddBookMenu extends AbstractMenu{
 
             System.out.println(res ? "添加成功！" : "添加失败！");
         }
-
-        SimpleCommonUtil.keyEnterToNext();
-
-        return null;
     }
+
 }
