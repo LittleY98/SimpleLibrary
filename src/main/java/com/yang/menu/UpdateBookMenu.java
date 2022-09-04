@@ -18,8 +18,6 @@ public class UpdateBookMenu extends AbstractMenu{
     @Override
     public Object fun(Object args) {
         String uuid;
-        String name;
-        String remark;
 
         System.out.println("请输入uuid:");
         uuid = new Scanner(System.in).next();
