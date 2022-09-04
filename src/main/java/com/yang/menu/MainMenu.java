@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  */
 public class MainMenu {
 
-    private static final String TITTLE = "========图书馆管理系统==========";
+    private static final String TITTLE = "==========图书管理系统==========";
 
     private static final String TAIL_TIP = "输入序号选择对应的操作（输入0退出）：";
 
@@ -28,6 +28,7 @@ public class MainMenu {
             int operation = scanner.nextInt();
 
             if (operation == 0){
+                System.out.println("感谢使用～");
                 break;
             }
 

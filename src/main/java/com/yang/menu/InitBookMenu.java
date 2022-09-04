@@ -1,14 +1,16 @@
 package com.yang.menu;
 
 import com.yang.common.SimpleCommonUtil;
-import com.yang.dao.CollectionDb;
+import com.yang.dao.impl.BookCollectionDb;
 import com.yang.entity.Book;
 
-import java.util.Scanner;
 
+/**
+ * 用于测试，初始化出三个书籍信息
+ */
 public class InitBookMenu extends AbstractMenu{
 
-    CollectionDb collectionDb = new CollectionDb();
+    BookCollectionDb collectionDb = new BookCollectionDb();
 
     public InitBookMenu() {
         menuName = "初始化书籍信息";

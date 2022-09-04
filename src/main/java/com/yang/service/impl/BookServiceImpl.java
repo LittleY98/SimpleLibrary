@@ -1,6 +1,7 @@
 package com.yang.service.impl;
 
-import com.yang.dao.CollectionDb;
+import com.yang.dao.impl.BookCollectionDb;
+import com.yang.dao.IBookDao;
 import com.yang.entity.Book;
 import com.yang.service.IBookService;
 
@@ -8,7 +9,7 @@ import java.util.Set;
 
 public class BookServiceImpl implements IBookService {
 
-    CollectionDb collectionDb = new CollectionDb();
+    IBookDao collectionDb = new BookCollectionDb();
 
     @Override
     public Set<Book> listBook() {

@@ -2,13 +2,10 @@ package com.yang.menu;
 
 import com.yang.common.CommonConstant;
 import com.yang.common.SimpleCommonUtil;
-import com.yang.dao.CollectionDb;
 import com.yang.entity.Book;
 import com.yang.service.IBookService;
 import com.yang.service.impl.BookServiceImpl;
 
-import java.util.HashSet;
-import java.util.Scanner;
 import java.util.Set;
 
 public class ShowBookMenu extends AbstractMenu{

@@ -1,5 +1,6 @@
-package com.yang.dao;
+package com.yang.dao.impl;
 
+import com.yang.dao.IBookDao;
 import com.yang.entity.Book;
 
 import java.util.HashSet;
@@ -7,7 +8,7 @@ import java.util.HashSet;
 /**
  * 用Collection模拟数据库
  */
-public class CollectionDb {
+public class BookCollectionDb implements IBookDao {
 
     private static final HashSet<Book> BOOKS_DB = new HashSet<>();
 
