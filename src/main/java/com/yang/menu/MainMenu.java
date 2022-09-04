@@ -1,5 +1,6 @@
 package com.yang.menu;
 
+import com.yang.common.CommonConstant;
 import com.yang.common.ConstantDataCollect;
 import com.yang.start.Start;
 
@@ -16,13 +17,24 @@ public class MainMenu {
 
     private static final String TITTLE = "========图书馆管理系统==========";
 
-    private static final String MARGIN = "=============================\n";
-
     private static final String TAIL_TIP = "输入序号选择对应的操作：";
 
 
     public static void showMainMenu(){
 
+        while (true){
+            showMenu();
+            Scanner scanner = new Scanner(System.in);
+            Integer operation = scanner.nextInt();
+
+            AbstractMenu abstractMenu = ConstantDataCollect.mainMenuList.get(operation - 1);
+            abstractMenu.fun("");
+
+        }
+
+    }
+
+    public static void showMenu(){
         List<String> collect = ConstantDataCollect.mainMenuList.stream().map(AbstractMenu::getMenuName).collect(Collectors.toList());
 
         System.out.println(TITTLE);
@@ -31,18 +43,8 @@ public class MainMenu {
             System.out.println(" " + (i + 1) + " " + collect.get(i));
         }
 
-        System.out.println(MARGIN + TAIL_TIP);
+        System.out.println(CommonConstant.MARGIN + "\n" + TAIL_TIP);
 
-
-        Scanner scanner = new Scanner(System.in);
-
-        while (true){
-            Integer operation = scanner.nextInt();
-
-            AbstractMenu abstractMenu = ConstantDataCollect.mainMenuList.get(operation - 1);
-            abstractMenu.fun("");
-
-        }
 
     }
 
