@@ -11,7 +11,7 @@ public class BookServiceImpl implements IBookService {
     CollectionDb collectionDb = new CollectionDb();
 
     @Override
-    public Set listBook() {
+    public Set<Book> listBook() {
         return collectionDb.list();
     }
 

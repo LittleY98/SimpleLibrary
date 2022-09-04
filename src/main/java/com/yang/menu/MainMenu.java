@@ -17,7 +17,7 @@ public class MainMenu {
 
     private static final String TITTLE = "========图书馆管理系统==========";
 
-    private static final String TAIL_TIP = "输入序号选择对应的操作：";
+    private static final String TAIL_TIP = "输入序号选择对应的操作（输入0退出）：";
 
 
     public static void showMainMenu(){
@@ -25,7 +25,11 @@ public class MainMenu {
         while (true){
             showMenu();
             Scanner scanner = new Scanner(System.in);
-            Integer operation = scanner.nextInt();
+            int operation = scanner.nextInt();
+
+            if (operation == 0){
+                break;
+            }
 
             AbstractMenu abstractMenu = ConstantDataCollect.mainMenuList.get(operation - 1);
             abstractMenu.fun("");
