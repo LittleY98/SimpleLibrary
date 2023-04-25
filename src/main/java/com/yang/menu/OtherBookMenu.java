@@ -1,25 +1,24 @@
 package com.yang.menu;
 
+import com.yang.aaa.Menu;
 import com.yang.common.SimpleCommonUtil;
 import com.yang.entity.Book;
 import com.yang.service.IBookService;
 import com.yang.service.impl.BookServiceImpl;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
+@Menu
 public class DeleteBookMenu extends AbstractMenu{
     IBookService bookService = new BookServiceImpl();
 
     public DeleteBookMenu() {
-        menuName = "删除产品";
+        menuName = "删除图书";
     }
-
 
     @Override
     public Object fun(Object args) {
-
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入要删除的书的UUID：");

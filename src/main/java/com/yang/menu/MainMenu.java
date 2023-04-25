@@ -2,10 +2,7 @@ package com.yang.menu;
 
 import com.yang.common.CommonConstant;
 import com.yang.common.ConstantDataCollect;
-import com.yang.start.Start;
 
-import java.util.AbstractList;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -15,7 +12,7 @@ import java.util.stream.Collectors;
  */
 public class MainMenu {
 
-    private static final String TITTLE = "==========图书管理系统==========";
+    private static final String TITTLE = "==========***管理系统==========";
 
     private static final String TAIL_TIP = "输入序号选择对应的操作（输入0退出）：";
 
@@ -41,6 +38,8 @@ public class MainMenu {
 
     public static void showMenu(){
         List<String> collect = ConstantDataCollect.mainMenuList.stream().map(AbstractMenu::getMenuName).collect(Collectors.toList());
+
+
 
         System.out.println(TITTLE);
 

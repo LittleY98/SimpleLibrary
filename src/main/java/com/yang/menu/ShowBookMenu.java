@@ -13,7 +13,7 @@ public class ShowBookMenu extends AbstractMenu{
     IBookService bookService = new BookServiceImpl();
 
     public ShowBookMenu() {
-        menuName = "展示图书";
+        menuName = "展示产品";
     }
 
     @Override
@@ -21,7 +21,7 @@ public class ShowBookMenu extends AbstractMenu{
         Set<Book> list = bookService.listBook();
 
         if (list.isEmpty()) {
-            System.out.println("图书列表为空");
+            System.out.println("产品列表为空");
         }
 
         for (Book book : list) {

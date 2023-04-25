@@ -12,7 +12,7 @@ public class AddBookMenu extends AbstractMenu{
     IBookService bookService = new BookServiceImpl();
 
     public AddBookMenu() {
-        menuName = "添加图书";
+        menuName = "添加产品";
     }
 
     @Override
@@ -36,7 +36,7 @@ public class AddBookMenu extends AbstractMenu{
         System.out.println("请输入备注信息:");
         remark = new Scanner(System.in).next();
 
-        if (uuid.isBlank() || name.isBlank()){
+        if (uuid.equals("") || name.equals("")){
             System.out.println("uuid和书名不可为空！！！");
         }else {
             Book book = new Book(uuid, name, remark);

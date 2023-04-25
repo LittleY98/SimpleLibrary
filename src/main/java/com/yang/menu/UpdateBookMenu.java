@@ -12,7 +12,7 @@ public class UpdateBookMenu extends AbstractMenu{
     IBookService bookService = new BookServiceImpl();
 
     public UpdateBookMenu() {
-        menuName = "修改图书";
+        menuName = "修改产品";
     }
 
     @Override

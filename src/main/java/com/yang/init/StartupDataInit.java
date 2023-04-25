@@ -11,12 +11,13 @@ public class StartupDataInit {
     /**
      * 初始化主菜单集合
      */
-    public static void initMenuList(){
-        ConstantDataCollect.mainMenuList.add(new ShowBookMenu());
-        ConstantDataCollect.mainMenuList.add(new DeleteBookMenu());
-        ConstantDataCollect.mainMenuList.add(new AddBookMenu());
-        ConstantDataCollect.mainMenuList.add(new UpdateBookMenu());
-        ConstantDataCollect.mainMenuList.add(new InitBookMenu());
-    }
+        public static void initMenuList(){
+            ConstantDataCollect.mainMenuList.add(new ShowBookMenu());
+            ConstantDataCollect.mainMenuList.add(new OtherBookMenu());
+            ConstantDataCollect.mainMenuList.add(new DeleteBookMenu());
+            ConstantDataCollect.mainMenuList.add(new AddBookMenu());
+            ConstantDataCollect.mainMenuList.add(new UpdateBookMenu());
+            ConstantDataCollect.mainMenuList.add(new InitBookMenu());
+        }
 
 }
