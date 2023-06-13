@@ -17,6 +17,7 @@ public class StartupDataInit {
         ConstantDataCollect.mainMenuList.add(new AddBookMenu());
         ConstantDataCollect.mainMenuList.add(new UpdateBookMenu());
         ConstantDataCollect.mainMenuList.add(new InitBookMenu());
+        ConstantDataCollect.mainMenuList.add(new StuMenu());
     }
 
 }
