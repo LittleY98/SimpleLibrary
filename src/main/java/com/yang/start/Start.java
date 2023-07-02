@@ -1,6 +1,6 @@
 package com.yang.start;
 
-import com.yang.init.StartupDataInit;
+import com.yang.init.StartupDataInitV2;
 import com.yang.menu.MainMenu;
 
 /**
@@ -10,7 +10,7 @@ public class Start {
 
     public static void main(String[] args) {
 
-        StartupDataInit.initMenuList();
+        StartupDataInitV2.initMenuList();
 
         MainMenu.showMainMenu();
 

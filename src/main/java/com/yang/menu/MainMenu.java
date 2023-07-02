@@ -1,5 +1,6 @@
 package com.yang.menu;
 
+import com.yang.annotation.Menu;
 import com.yang.common.CommonConstant;
 import com.yang.common.ConstantDataCollect;
 
@@ -10,6 +11,7 @@ import java.util.stream.Collectors;
 /**
  * 显示主菜单
  */
+@Menu(name = "测试")
 public class MainMenu {
 
     private static final String TITTLE = "==========***管理系统==========";

@@ -1,5 +1,6 @@
 package com.yang.menu;
 
+import com.yang.annotation.Menu;
 import com.yang.common.CommonConstant;
 import com.yang.common.SimpleCommonUtil;
 import com.yang.entity.Book;
@@ -8,12 +9,18 @@ import com.yang.service.impl.BookServiceImpl;
 
 import java.util.Set;
 
+@Menu(name = "查看产品列表")
 public class ShowBookMenu extends AbstractMenu{
 
     IBookService bookService = new BookServiceImpl();
 
+
     public ShowBookMenu() {
-        menuName = "展示产品";
+
+    }
+
+    public ShowBookMenu(String menuName) {
+        super(menuName);
     }
 
     @Override

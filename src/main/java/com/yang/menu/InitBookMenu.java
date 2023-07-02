@@ -1,19 +1,25 @@
 package com.yang.menu;
 
+import com.yang.annotation.Menu;
 import com.yang.common.SimpleCommonUtil;
 import com.yang.dao.impl.BookCollectionDb;
 import com.yang.entity.Book;
 
 
+
 /**
  * 用于测试，初始化出三个书籍信息
  */
+@Menu(name = "初始化产品")
 public class InitBookMenu extends AbstractMenu{
 
     BookCollectionDb collectionDb = new BookCollectionDb();
 
     public InitBookMenu() {
-        menuName = "初始化书籍信息";
+    }
+
+    public InitBookMenu(String menuName) {
+        super(menuName);
     }
 
     @Override

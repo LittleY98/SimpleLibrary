@@ -1,5 +1,6 @@
 package com.yang.menu;
 
+import com.yang.annotation.Menu;
 import com.yang.common.SimpleCommonUtil;
 import com.yang.entity.Book;
 import com.yang.service.IBookService;
@@ -7,12 +8,15 @@ import com.yang.service.impl.BookServiceImpl;
 
 import java.util.Scanner;
 
+@Menu(name = "添加产品")
 public class AddBookMenu extends AbstractMenu{
-
     IBookService bookService = new BookServiceImpl();
 
     public AddBookMenu() {
-        menuName = "添加产品";
+    }
+
+    public AddBookMenu(String menuName) {
+        super(menuName);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.yang.menu;
 
+import com.yang.annotation.Menu;
 import com.yang.common.SimpleCommonUtil;
 import com.yang.entity.Book;
 import com.yang.service.IBookService;
@@ -9,13 +10,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
+@Menu(name = "删除产品")
 public class DeleteBookMenu extends AbstractMenu{
     IBookService bookService = new BookServiceImpl();
 
     public DeleteBookMenu() {
-        menuName = "删除产品";
     }
 
+    public DeleteBookMenu(String menuName) {
+        super(menuName);
+    }
 
     @Override
     public Object fun(Object args) {

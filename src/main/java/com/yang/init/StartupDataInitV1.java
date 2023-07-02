@@ -6,7 +6,7 @@ import com.yang.menu.*;
 /**
  * 启动时数据初始化
  */
-public class StartupDataInit {
+public class StartupDataInitV1 {
 
     /**
      * 初始化主菜单集合
